@@ -1,2 +1,1 @@
-# Skeleton project for Swagger
-# EM Syndicate Service
+# Even Money Syndicate Webservice
