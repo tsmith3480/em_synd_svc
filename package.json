@@ -8,6 +8,8 @@
   "license": "",
   "main": "app.js",
   "dependencies": {
+    "jsonwebtoken": "^8.3.0",
+    "mongodb": "^3.0.10",
     "restify": "^4.0.2",
     "swagger-restify-mw": "^0.1.0"
   },
