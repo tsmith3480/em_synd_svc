@@ -35,3 +35,4 @@ config/runtime.yaml
 
 # Security config files
 config/security.js
+config/private.key
