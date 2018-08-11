@@ -10,7 +10,7 @@ const
 
 function login(req, res, next) {
   auth(req.body.UserName, req.body.Password, (err, user) => {
-    if (err) return res.json(500, err)
+    if (err) return res.json(401, err)
 
     jwt.sign(user, (err, token) => {
       err ? res.json(500, err) : res.json(200, { message: 'OK', token: token })

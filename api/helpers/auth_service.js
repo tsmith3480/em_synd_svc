@@ -14,16 +14,16 @@ function authenticate(username, password, cb) {
       db.db(dbconf.em_synd).collection('users')
         .findOne({ email1: username })
         .then(response => {
-          (response.password === password) ? cb(null, response) : cb({ message: 'Invalid password' }, null)
+          (response && response.password === password) ? cb(null, response) : cb({ message: 'Invalid username or password' })
           db.close(true)
         })
         .catch(err => {
-          cb(err, null)
+          cb(err)
           db.close(true)
         })
     })
     .catch(err => {
-      cb(err, null)
+      cb(err)
       db.close(true)
     })
 }
