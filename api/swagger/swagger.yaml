@@ -40,6 +40,42 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /best_bets:
+    x-swagger-router-controller: best_bets
+    get:
+      operationId: best_bets
+      parameters:
+        - in: query
+          name: url
+          description: URL
+          type: string
+          required: true
+        - in: query
+          name: elem
+          description: HTML element
+          type: string
+          required: false
+        - in: query
+          name: id
+          description: HTML element id
+          type: string
+          required: false
+        - in: query
+          name: clas
+          description: HTML elemnt class
+          type: string
+          required: false
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/LoginResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
