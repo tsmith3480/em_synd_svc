@@ -15,7 +15,7 @@
     "jsonwebtoken": "^8.3.0",
     "mongodb": "^3.0.10",
     "restify": "^4.0.2",
-    "swagger-restify-mw": "^0.1.0"
+    "swagger-restify-mw": "^0.7.0"
   },
   "devDependencies": {
     "should": "^7.1.0",
